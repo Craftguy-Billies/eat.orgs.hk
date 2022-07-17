@@ -27,9 +27,26 @@
                 font-weight:550;
             }
 
+            .dripdown{
+                background-color: rgb(127, 195, 255);
+                width:400px;
+                height:50px;
+                margin-top:10px;
+                margin-left:30px;
+                font-size:30px;
+                font-family:'Courier New', Courier, monospace;
+                font-weight:550;
+            }
+
+            .octave,
+            .dripdown.hover{
+                background-color: rgb(113, 98, 177);
+                cursor:pointer;
+            }
+
             .active,
             .dropdown:hover{
-                background-color:rgb(70, 176, 140);
+                background-color:rgb(70, 176, 104);
                 cursor:pointer;
             }
 
@@ -44,11 +61,28 @@
                 max-height:0;
             }
 
+            .contents{
+                background-color: rgb(199, 210, 247);
+                width:385px;
+                margin-left:30px;
+                padding-left:15px;
+                color: #000;
+                transition: max-height 0.2s ease-out;
+                overflow:hidden;
+                max-height:0;
+            }
+
         </style>
     </head>
     <body>
         <button type="button" class="dropdown">Holinization</button>
         <div class="content">ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC</div>
+
+        <button type="button" class="dripdown">2nd</button>
+        <div class="contents">ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC</div>
+
+        <button type="button" class="dripdown">3rd</button>
+        <div class="contents">ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC<br>ABC</div>
 
         
 <script type="text/javascript" lang="javascript">
@@ -70,6 +104,25 @@
         }
 
     }
+
+    var dripdown = document.getElementsByClassName("dripdown")
+    var i;
+
+    for (i = 0;i < dripdown.length;i++){
+    dripdown[i].addEventListener("click",anotherHolinization)
+
+    function anotherHolinization(){
+        this.classList.toggle("octave");
+        var contents = document.querySelectorAll(".contents");
+
+        if (contents.style.maxHeight){
+            contents.style.maxHeight = null;
+        }
+
+        else{
+            contents.style.maxHeight = contents.scrollHeight + "px";
+        }
+    }}
 </script>
     </body>
 </html>
