@@ -231,14 +231,15 @@ label:hover{
     }
 }
 
-var arrow = getElementById("label")
+var arrow = document.getElementById("arrows");
+arrow.addEventListener("click",opening);
         function opening(){
-            if (this.classList.contains("right1")){
-                this.classList.replace("right1","opened")
+            if (document.getElementById("arrows").classList.contains("right1")){
+                document.getElementById("arrows").classList.replace("right1","opened")
             }
 
             else{
-                this.classList.replace("opened","right1")
+                document.getElementById("arrows").classList.replace("opened","right1")
             }
         }
 </script>
