@@ -102,11 +102,15 @@
 }
 
 #opener:checked ~ nav{
-    transform:translateX(0)
+    transform:translateX(0);
+    transition-duration: 0.5s;
+
 }
 
 #opener:not(:checked) ~ nav{
-    transform: translateX(-35vw)
+    transform: translateX(-35vw);
+    transition-duration: 0.5s;
+
 }
 
 label{
@@ -227,16 +231,14 @@ label:hover{
     }
 }
 
-var arrow = getElementById("arrows")
+var arrow = getElementById("label")
         function opening(){
-            if (arrow.classList.contains("right1")){
-                arrow.classList.remove("right1")
-                arrow.classList.add("opened")
+            if (this.classList.contains("right1")){
+                this.classList.replace("right1","opened")
             }
 
             else{
-                arrow.classList.add("right1")
-                arrow.classList.remove("opened")
+                this.classList.replace("opened","right1")
             }
         }
 </script>
