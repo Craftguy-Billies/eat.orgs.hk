@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="3;url=https://craftguy.eu.org/">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>Craftguy&trade; Eats</title>
+	<style>
+		
+		body{
+			background-color: #fff;
+		}
+		
+.only-words{
+	text-align:center;
+	font-size:3vw;
+	text-decoration:underline;
+	font-weight: 550;
+	color: #000;
+		}
+
+		holin{
+			font-size:3.5vw;
+		}
+
+		.holinization{
+			font-size: 4.5vw;
+		}
+
+		.holiner{
+			color: blue;
+		}
+
+	</style>
+</head>
+
+<body onload="holinization()">
+	<div class="only-words">
+<holin>Powered by Craftguy&trade;. Official website: <a>https://craftguy.eu.org</a></holin>
+	</div>
+
+	<script type="text/javascript" lang="javascript">
+
+		function holinization(){
+		document.getElementsByTagName("a")[0].setAttribute("class","holiner")
+		}
+
+	</script>
+</body>
+</html>
