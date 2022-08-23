@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://billiez.rf.gd/2/style.css">
+
+        <style>
+            .holin{
+                font-size:40px;
+            }
+
+            .blank{
+                width:100%;
+                height:150vh;
+            }
+
+            #show{
+                opacity:0.3;
+            }
+
+            .a{
+                height:100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="trial">AAA</div>
+        <div class="trial">BBB</div>
+        <div class="collapsible">CCC</div>
+        <div class="blank"></div>
+        <div id="show">DDD</div>
+        <div class="a">A</div>
+        <div class="a">A</div>
+        <div class="a">A</div>
+        <div class="a">A</div>
+        <div class="a">A</div>
+
+        <div class="scss">GGG</div>
+        <div class="aa">a</div>
+        <div class="bb">b</div>
+        <div class="cc">c</div>
+        <script>
+            $(function(){
+                $(".trial").on("mouseover",function(){$(this).addClass("holin")}).on("mouseout",function(){$(this).removeClass("holin")});
+                $(".trial").on("click",function(){$("div.collapsible").slideToggle(1000)});
+                $(window).on("scroll",function(){if( $(window).scrollTop()+$(window).innerHeight() > $("#show").offset().top){$("#show").animate({marginLeft:'100px',opacity:'1'},2000)}});
+                $(window).on("scroll",function(){$("div.a").each(function(){if($(window).scrollTop()+$(window).innerHeight()>$(this).offset().top){$(this).animate({marginLeft:'100px'},2000)}})});
+
+                
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+            nav{width:100%;height:50px;background-color:aqua;} nav ul{list-style:none;margin:0;padding:0;} html,body{margin:0;padding:0;}
+            nav ul li{font-size:20px;position:relative;float:right;height:100%;width:150px;line-height:50px;text-align:center;cursor:pointer;} 
+            nav ul li div{height:50px;width:150px;} nav ul li div:hover{background-color:rgba(0,0,255,0.6);border-radius:12px 2px;}
+            nav ul li#left{float:left} nav ul li#left:hover{background-color:aqua;} nav ul ol{list-style:none;padding:0;margin:0;position:relative;background-color:aqua;}
+            nav ul ol{display:none;background-color:aqua;height:auto;} nav ul ol li{background-color:aqua;} nav ul li:hover ol{display:block;} nav ul li ol li:hover{background-color:rgba(0,0,255,0.6);border-radius:12px 2px;}
+            nav ul ol ul{position:absolute;top:0px;right:150px;display:none;} nav ul ol li:hover ul{display:block;}
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <nav>
+            <ul>
+                <li><div>Contact Us</div>
+                    <ol>
+                        <li>Phone</li>
+                        <li>Fax</li>
+                        <li>In Real Person</li>
+                    </ol>
+                </li>
+                <li><div>Our Mission</div>
+                    <ol>
+                        <li>Aim</li>
+                        <li>Goals</li>
+                    </ol>
+                </li>
+                <li><div>About Us</div>
+                    <ol>
+                        <li>Name</li>
+                        <li>Class</li>
+                        <li><div class="sec">&#11160; History</div>
+                            <ul>
+                                <li>Autobiography</li>
+                                <li>Youtube</li>
+                                <li>Academics</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+                <li id="left">Craftguy</li>
+            </ul>
+        </nav>
+        
+        <script>
+            $(function(){
+                $("#left").on("click",function(){
+                    window.location.href = 'https://craftguy.eu.org/',true;
+                })
+            })
+        </script>
+    </body>
+</html>
